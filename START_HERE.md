@@ -42,7 +42,7 @@ Choose the Netlify account that owns your light-pole project. The link command t
 5. Set the password you requested:
 
 ```text
-npx netlify env:set APP_PASSWORD 18641
+npx netlify env:set APP_PASSWORD YOUR_APP_PASSWORD
 ```
 
 6. Generate a session-signing secret:
