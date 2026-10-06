@@ -1,0 +1,15 @@
+{
+  "name": "dupont-light-pole-verification",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.mts",
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --build --prod"
+  },
+  "dependencies": { "@netlify/blobs": "^10.0.0" },
+  "devDependencies": { "@netlify/functions": "^5.0.0", "@types/node": "^22.0.0", "typescript": "^5.9.0", "tsx": "^4.20.0", "netlify-cli": "^23.0.0" },
+  "engines": { "node": ">=22" }
+}

@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+[build.environment]
+  NODE_VERSION = "22"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+[functions."app"]
+  included_files = ["private/app.html"]
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "same-origin"
+    Cache-Control = "no-store"
+[dev]
+  framework = "#static"
+  publish = "public"
